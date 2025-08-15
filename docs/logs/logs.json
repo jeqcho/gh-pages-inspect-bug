@@ -1,0 +1,120 @@
+{
+  "2025-08-14T14-19-51-07-00_theory-of-mind_kQGpijrPfzzgFmMePfE3wB.eval": {
+    "version": 2,
+    "status": "success",
+    "eval": {
+      "eval_id": "ARfrYvHRfJZRsK26hxXxp5",
+      "run_id": "HnE8EvwvqgGydbvuat4RwC",
+      "created": "2025-08-14T14:19:51-07:00",
+      "task": "theory_of_mind",
+      "task_id": "kQGpijrPfzzgFmMePfE3wB",
+      "task_version": 0,
+      "task_file": "example_task.py",
+      "task_registry_name": "theory_of_mind",
+      "task_attribs": {},
+      "task_args": {},
+      "task_args_passed": {},
+      "dataset": {
+        "name": "theory_of_mind",
+        "location": "example://theory_of_mind",
+        "samples": 100,
+        "sample_ids": [
+          1
+        ],
+        "shuffled": false
+      },
+      "model": "mockllm/model",
+      "model_generate_config": {},
+      "model_args": {},
+      "config": {
+        "limit": 1,
+        "epochs": 1,
+        "epochs_reducer": [
+          "mean"
+        ],
+        "fail_on_error": true,
+        "sandbox_cleanup": true,
+        "log_samples": true,
+        "log_realtime": true,
+        "log_images": true,
+        "score_display": true
+      },
+      "revision": {
+        "type": "git",
+        "origin": "git@github.com:jeqcho/gh-pages-inspect-bug.git",
+        "commit": "84ded0b"
+      },
+      "packages": {
+        "inspect_ai": "0.3.122"
+      },
+      "scorers": [
+        {
+          "name": "match",
+          "options": {},
+          "metrics": [
+            {
+              "name": "inspect_ai/accuracy",
+              "options": {}
+            },
+            {
+              "name": "inspect_ai/stderr",
+              "options": {}
+            }
+          ],
+          "metadata": {}
+        }
+      ]
+    },
+    "plan": {
+      "name": "plan",
+      "steps": [
+        {
+          "solver": "generate",
+          "params": {}
+        }
+      ],
+      "config": {}
+    },
+    "results": {
+      "total_samples": 1,
+      "completed_samples": 1,
+      "scores": [
+        {
+          "name": "match",
+          "scorer": "match",
+          "params": {},
+          "metrics": {
+            "accuracy": {
+              "name": "accuracy",
+              "value": 0.0,
+              "params": {}
+            },
+            "stderr": {
+              "name": "stderr",
+              "value": 0.0,
+              "params": {}
+            }
+          }
+        }
+      ]
+    },
+    "stats": {
+      "started_at": "2025-08-14T14:19:51-07:00",
+      "completed_at": "2025-08-14T14:19:51-07:00",
+      "model_usage": {}
+    },
+    "reductions": [
+      {
+        "scorer": "match",
+        "samples": [
+          {
+            "value": 0,
+            "answer": "Default output from mockllm/model",
+            "explanation": "Default output from mockllm/model",
+            "sample_id": 1
+          }
+        ]
+      }
+    ]
+  }
+}
